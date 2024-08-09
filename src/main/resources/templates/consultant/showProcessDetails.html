@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Process detail</title>
+    <link th:href="@{/css/index.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="process--individual--container" style="margin-top: 20vh" th:text="'Data rozpoczęcia najmu: ' + ${process.rentStartDate}"></div>
+<div class="process--individual--container" th:text="'Data zakończenia najmu: ' + ${process.rentEndDate}"></div>
+<div class="center">
+    <button class="process--individual--container" th:onclick="'window.location.href=\'/consultant/process/' + ${process.processId} + '/extend\''">PRZEDŁUŻ WYNAJEM</button>
+</div>
+<div class="center" style="width: 100vw;margin-top: 5vh">
+    <button class="process--individual--container" th:onclick="'window.history.back();'">Powrót do listy procesów</button>
+</div>
+</body>
+</html>

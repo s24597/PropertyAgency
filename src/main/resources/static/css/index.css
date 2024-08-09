@@ -1,0 +1,68 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #9370db;
+}
+
+.welcome--container {
+    width: 100vw;
+    height: 20vh;
+    font-size: xx-large;
+}
+
+.data--container {
+    width: 40vw;
+    height: 80vh;
+}
+
+.clientlist--container {
+    width: 60vw;
+    height: 80vh;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.consultant--label {
+    width: 25vw;
+    height: 60vh;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: black;
+}
+
+.clients--label {
+    width: 45vw;
+    height: 60vh;
+    border-style: dotted;
+    border-width: 2px;
+}
+
+.client--space {
+    width: 15vw;
+    height: 1vh;
+    font-size: x-large;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+.productivity--container {
+    width: 25vw;
+    height: 12vh;
+    font-size: xx-large;
+}
+
+.process--individual--container {
+    font-size: xxx-large;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.font--size{
+    font-size: xx-large;
+}

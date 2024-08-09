@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/index.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <div class="center welcome--container">
+        <div class="center" th:text = "${welcome_consultant}"></div>
+    </div>
+    <div class="center">
+        <div class="center data--container">
+            <div class="consultant--label">
+                <div class="center productivity--container">Personal Productivity</div>
+                <div class="center productivity--container">Number of case resolved:  <div th:text="${cases}"></div></div>
+                <div class="center productivity--container">Salary bonus:  x<strong th:text="${bonus}"></strong></div>
+            </div>
+        </div>
+        <div class="center clientlist--container">
+            <div class="clients--label center">
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="client--space">Id</th>
+                        <th class="client--space">Name</th>
+                        <th class="client--space">Surname</th>
+                    </tr>
+                    </thead>
+                <th:block th:each="client : ${clients}">
+                        <tbody>
+                        <tr th:onclick="'window.location.href=\'processes/' + ${client.clientId} + '\';'" >
+                            <td th:text="${client.clientId}" class="client--space" ></td>
+                            <td th:text="${client.name}" class="client--space"></td>
+                            <td th:text="${client.surname}" class="client--space"></td>
+                        </tr>
+                        </tbody>
+                </th:block>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

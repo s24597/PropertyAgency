@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Processes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/index.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div style="margin-top: 35vh" class="center">
+    <table>
+        <thead>
+        <tr>
+            <th class="client--space">Id</th>
+            <th class="client--space">type</th>
+            <th class="client--space">stage</th>
+        </tr>
+        </thead>
+        <th:block th:each="process : ${processes}">
+            <tbody>
+            <tr  th:onclick="'window.location.href=\'/consultant/process/' + ${process.processId} + '\''" >
+                <td th:text="${process.processId}" class="client--space" ></td>
+                <td th:text="${process.type}" class="client--space"></td>
+                <td th:text="${process.stage}" class="client--space"></td>
+            </tr>
+            </tbody>
+        </th:block>
+    </table>
+
+</div>
+<div class="center" style="width: 100vw;margin-top: 5vh">
+    <button th:onclick="'window.history.back();'">Powrót do głównego widoku</button>
+</div>
+</body>
+</html>
